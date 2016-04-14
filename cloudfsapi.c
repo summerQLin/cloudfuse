@@ -770,7 +770,7 @@ int cloudfs_connect()
   {
     if (json_payload)
     {
-      debugf("json_payload:%c",json_payload->data)
+      debugf("json_payload:%c",json_payload->data);
       json = json_tokener_parse_verbose(json_payload->data, &json_err);
       free(json_payload->data);
       free(json_payload);
