@@ -652,8 +652,8 @@ int cloudfs_connect()
     {
       snprintf(postdata, sizeof(postdata), "{\"auth\":{\"identity\":{"
           "\"methods\":[\"password\"],\"password\":{\"user\":{\"id\":"
-          "\"%s\",\"password\":\"%s\"}},\"scope\":{\"project\":{\"id"
-          "\":\"%s\"}}}}}", reconnect_args.username, reconnect_args.password,
+          "\"%s\",\"password\":\"%s\"}}},\"scope\":{\"project\":{\"id"
+          "\":\"%s\"}}}}", reconnect_args.username, reconnect_args.password,
           reconnect_args.tenant);
     }
     else if (reconnect_args.username[0] && reconnect_args.password[0])
