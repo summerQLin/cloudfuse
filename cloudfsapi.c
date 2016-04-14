@@ -785,6 +785,7 @@ int cloudfs_connect()
           { .e_key=NULL }
         };
         json_object **ep = get_elements_from_json(path, json);
+      	debugf("ep: %s", &ep)
         if (ep)
         {
           int ep_id;
@@ -792,6 +793,7 @@ int cloudfs_connect()
           char wants_internal = reconnect_args.use_snet;
           for (ep_id=0; ep[ep_id]; ++ep_id)
           {
+	    debugf("ep_id: %s", ep[ep_id]) 
             json_object *interface = NULL, *url = NULL;
             json_object_object_get_ex(ep[ep_id], "url", &url);
             json_object_object_get_ex(ep[ep_id], "interface", &interface);
@@ -807,6 +809,7 @@ int cloudfs_connect()
         }
       }
       json_object_put(json);
+      strncpy(storage_url, "https://g4ihos.itci.hpecorp.net:8080/v1/AUTH_a48a9fd07edf4792a5f39f904c6800b6");
       debugf("storage_url: %s", storage_url);
       debugf("storage_token: %s", storage_token);
     }
