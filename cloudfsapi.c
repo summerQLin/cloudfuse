@@ -807,7 +807,7 @@ int cloudfs_connect()
         }
       }
       json_object_put(json);
-      strncpy(storage_url, "http://16.202.162.22:8080/v1/AUTH_a48a9fd07edf4792a5f39f904c6800b6", sizeof(storage_url));
+      strncpy(storage_url, "https://g4ihos.itci.hpecorp.net:8080/v1/AUTH_a48a9fd07edf4792a5f39f904c6800b6", sizeof(storage_url));
       debugf("storage_url: %s", storage_url);
       debugf("storage_token: %s", storage_token);
     }
